@@ -1,0 +1,14 @@
+{
+  "name": "capstone-root",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\" \"npm run start:cors\"",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "start:cors": "node node_modules/cors-anywhere/server.js --port 3003"
+  },
+  "dependencies": {
+    "concurrently": "^9.0.1",
+    "cors-anywhere": "^0.4.4"
+  }
+}

@@ -1,0 +1,191 @@
+/* Add some padding to the main content to avoid being hidden by the navbar */
+
+.modal {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.delete-button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c9302c;
+}
+
+.modal-content button {
+  background-color: #4CAF50; /* Green for Save */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.modal-content button:hover {
+  background-color: #45a049;
+}
+
+.delete-button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.delete-button:hover {
+  background-color: #c9302c;
+}
+
+.cancel-button {
+  background-color: #ddd;
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cancel-button:hover {
+  background-color: #ccc;
+}
+
+/* styling for input field errors */
+.input-error {
+  border-color: red;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+/* ############################ 
+Styling the Calendar search bar
+############################ */
+
+.search-container {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  position: relative; /* Ensure the results box stays within the container */
+}
+
+.search-container input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.search-results {
+  position: absolute; /* Position the results below the input field */
+  top: 100%; /* Position just below the input */
+  left: 0;
+  width: calc(100%); /* Make the width match the input field */
+  max-height: 300px; /* Limit max height */
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow-y: auto; /* Enable scroll if results are too many */
+  z-index: 101; /* Ensure it stays above other content */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-result-item {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.search-result-item:last-child {
+  border-bottom: none; /* Remove the bottom border for the last item */
+}
+
+.search-result-item:hover {
+  background-color: #e0e0e0;
+}
+.search-results:empty {
+  display: none;
+}
+
+/* ################################
+end styling the Calendar search bar 
+################################# */
+
+/* overriding FC styling */
+.fc-addTaskButton-button, .fc-addProjectButton-button {
+  background-color: blue !important;
+  color: white !important;
+}
+
+.fc-addTaskButton-button:hover, .fc-addProjectButton-button:hover {
+  background-color: darkblue !important;
+}
+.fc-today-button {
+  background-color: red !important;
+}
+
+/* style the title and buttons */
+.fc-toolbar {
+  display: flex;
+  flex-direction: column; /* Stack title and buttons vertically */
+  align-items: center; /* Center all elements */
+  margin-bottom: 20px; /* Adjust space below the toolbar */
+}
+
+/* Center and style the title */
+.fc-toolbar-title {
+  font-size: 24px;
+  margin-bottom: 10px; /* Space between title and buttons */
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Adjust the buttons layout */
+.fc-toolbar-chunk {
+  display: flex;
+  justify-content: center;
+}
+
+/* Use this styling for month view all other views are 
+handled in fetchTasks in Calendar.js */
+
+/* non completed tasks */
+.task-event {
+  background-color: rgba(0, 0, 255, 0.5); 
+  border-color: rgba(0, 0, 255, 1);
+  color: #FFF;
+}
+/* Style for completed tasks */
+.task-event.completed {
+  background-color: grey; 
+  border-color: darkgrey; 
+}
+
+
